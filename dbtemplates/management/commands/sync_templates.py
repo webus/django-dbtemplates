@@ -82,7 +82,7 @@ class Command(BaseCommand):
                         t = Template.on_site.get(name__exact=name)
                     except Template.DoesNotExist:
                         if not force:
-                            confirm = raw_input(
+                            confirm = input(
                                 "\nA '%s' template doesn't exist in the "
                                 "database.\nCreate it with '%s'?"
                                 " (y/[n]): """ % (name, path))
