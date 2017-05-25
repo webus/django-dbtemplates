@@ -67,7 +67,7 @@ class Command(BaseCommand):
         if app_first:
             tpl_dirs = app_template_dirs + DIRS
         else:
-            tpl_dirs = DIRS + list(app_template_dirs)
+            tpl_dirs = list(DIRS) + list(app_template_dirs)
         templatedirs = [d for d in tpl_dirs if os.path.isdir(d)]
 
         for templatedir in templatedirs:
